@@ -1,7 +1,6 @@
 
 /* 
 ** Sonic String.
-** 
 */
 
 /* Error Codes */
