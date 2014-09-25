@@ -64,7 +64,7 @@ typedef struct sstring
     ___set set;                          // Equivalente a memset().
     ___copy copy;                        // Equivalente a memcpy().
     ___alloc alloc;                      // Equivalente a realloc().
-    ___clear clear;                      // Equivalente a free().
+    ___clear clear;                      // Equivalente a free ().
 } sstring;
 
 /* Prototypes. (Checking) */
