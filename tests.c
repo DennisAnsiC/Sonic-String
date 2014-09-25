@@ -116,8 +116,8 @@ int main (int argc, char *argv[])
 
         // velhaxx
         // novaxxx
-        stra->replace(stra, "velhaxx", "novaxxx");
-        printf("replace...\nstr: %s - len: %d - Error code: 0x%d\n", stra->string(stra), stra->length(stra), stra->error(stra));
+        //stra->replace(stra, "velhaxx", "novaxxx");
+        //printf("replace...\nstr: %s - len: %d - Error code: 0x%d\n", stra->string(stra), stra->length(stra), stra->error(stra));
 
         // Deleta string
         stra->delete(stra);
