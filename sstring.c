@@ -262,72 +262,7 @@ unsigned char *_set_value(struct sstring *this, const unsigned char *string, uns
 
 unsigned char *_replace(struct sstring *this, const unsigned char *old_string, const unsigned char *new_string)
 {
-    unsigned char *pointer = NULL;
-    int control [6] = { 0, 0, 0, 0, 0, 0 };
-    this->last_error = SS_UNKNOWN;
-
-    if (old_string && new_string && this->string_value && this->string_length > 0)
-    {
-        control[0] = this->len(old_string);
-        control[4] = this->len(new_string);
-
-        if (control[4] < control[0] || control[4] == control[0])
-        {
-            if (control[4] < control[0]) 
-                control[5] = control[0] - control[4];
-            else
-                control[5] = 0;
-        }
-        else
-            control[5] = control[4] - control[0];
-            
-        for (;; control[3]++)
-        {
-            for (control[1] = 0; control[1] <= control[0]; control[1]++)
-            {
-                if (this->string_value[control[3] + control[1]] == '\0') break;
-                if (this->string_value[control[3] + control[1]] == old_string[control[1]])
-                    control[2]++;
-                else
-                    break;
-            }
-
-            if (control[2] == control[0]) 
-            {
-                // FIXME
-                if (control[4] > control[0])
-                {
-                    this->string_value = (unsigned char *)this->alloc(this->string_value, 
-                        ((this->string_length + control[5]) * sizeof(char)) + 1);
-
-                    for (control[1] = control[3] + control[4]; this->string_value[control[1]] != '\0'; control[1]++)
-                        this->string_value[control[3] + control[0]] = this->string_value[control[1]];
-
-                    this->set_value(this, new_string, control[3]);
-                }
-                else
-                {
-                    this->set_value(this, new_string, control[3]);
-                    for (control[1] = control[3] + control[4]; this->string_value[control[1]] != '\0'; control[1]++)
-                    {
-                        this->string_value[control[1]] = this->string_value[control[1] + control[5]];
-                    }
-                }
-
-                if (this->string_length > (unsigned int)(control[3] + control[4]))
-                {
-                    control[3] += control[4];
-                    control[2] = 0;
-                }
-                else
-                    break;
-            }
-        }
-    }
-    else
-        this->last_error = SS_INVALID_BUFFER;
-
-    return pointer;
+    // Here...
 }
 
 /* Functions. (Private) */
