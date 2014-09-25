@@ -1,4 +1,4 @@
-Sonic-String
+Sonic String
 ============
 
 Biblioteca simples para manipulação de texto.
