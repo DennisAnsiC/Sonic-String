@@ -1,4 +1,4 @@
-Sonic String
-============
+# Sonic String
 
-Biblioteca simples para manipulação de texto.
+Simple library for manipulating text.
+- Autor: Dennis / dennisansic@inbox.im
