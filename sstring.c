@@ -40,28 +40,28 @@ sstring *new_sstring (const unsigned char *string_initialization)
       _set(string, 0, sizeof(sstring));
 
       /* Default values. */
-      string->_last_error      = SS_UNKNOWN;
-      string->_string_value    = NULL;
-      string->_string_length   = 0;
+      string->_last_error     = SS_UNKNOWN;
+      string->_string_value   = NULL;
+      string->_string_length  = 0;
 
       /* Public. */
       string->error           = _error;
       string->string          = _string;
       string->length          = _length;
       string->value           = _value;
-      string->delete         = _delete;
-      string->concat         = _concat;
-      string->zero         = _zero;
+      string->delete          = _delete;
+      string->concat          = _concat;
+      string->zero            = _zero;
       string->compare         = _compare;
-      string->search         = _search;
-      string->set_value      = _set_value;
+      string->search          =  _search;
+      string->set_value       = _set_value;
       string->replace         = _replace;
       string->tolower         = __tolower;
       string->toupper         = __toupper;
-      string->position      = _position;
+      string->position        = _position;
       string->is_char         = _is_char;
       string->is_numeric      = _is_numeric;
-      string->revert         = _revert;
+      string->revert          = _revert;
 
       /* Private. */
       string->_len            = _len;
@@ -71,7 +71,7 @@ sstring *new_sstring (const unsigned char *string_initialization)
       string->_clear          = _clear;
 
       /* Checking 'Is OK'. */
-      if (string->error      && string->string  && string->length  && string->value    && string->delete    &&
+      if (string->error     && string->string  && string->length  && string->value    && string->delete    &&
          string->concat     && string->zero    && string->compare && string->search   && string->set_value &&
          string->replace    && string->tolower && string->toupper && string->position && string->is_char   &&
          string->is_numeric && string->revert  &&
