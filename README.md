@@ -39,6 +39,7 @@ Simple library for manipulating text.
 		 
 		Retorno: Ponteiro para inicio da string.
 
+		
 ### 0x01 - string
 - Função responsável por retornar a string atual.
 		Protótipo:
@@ -46,6 +47,7 @@ Simple library for manipulating text.
 		 
 		Retorno: Ponteiro para inicio da string.
 
+		
 ### 0x02 - length
 - Função responsável por retornar tamanho da string atual.
 		Protótipo:
